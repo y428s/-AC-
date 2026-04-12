@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>文商总平均计算器</title>
@@ -11,16 +12,19 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
+
         .container {
             background: white;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             text-align: center;
             color: #2c3e50;
         }
+
         .semester {
             margin: 25px 0;
             padding: 20px;
@@ -28,20 +32,24 @@
             border-radius: 8px;
             background: #f8f9fa;
         }
+
         .semester h2 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 8px;
         }
+
         .subject-group {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 12px;
             margin: 15px 0;
         }
+
         .subject {
             margin: 6px 0;
         }
+
         label {
             display: inline-block;
             width: 130px;
@@ -49,6 +57,7 @@
             font-size: 14px;
             color: #34495e;
         }
+
         input {
             width: 70px;
             padding: 6px;
@@ -56,6 +65,7 @@
             border-radius: 4px;
             text-align: center;
         }
+
         button {
             background: #4CAF50;
             color: white;
@@ -67,23 +77,29 @@
             margin: 8px;
             transition: background 0.3s;
         }
+
         button:hover {
             background: #45a049;
         }
+
         button.second {
             background: #3498db;
         }
+
         button.second:hover {
             background: #2980b9;
         }
+
         button.final {
             background: #e74c3c;
             font-size: 18px;
             padding: 14px 30px;
         }
+
         button.final:hover {
             background: #c0392b;
         }
+
         #result {
             margin-top: 25px;
             padding: 20px;
@@ -94,16 +110,19 @@
             border-left: 5px solid #4CAF50;
             white-space: pre-line;
         }
+
         .final-result {
             background: #fff3cd;
             border-left: 5px solid #ffc107;
         }
+
         .center {
             text-align: center;
             margin: 20px 0;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>🏫 文商总平均计算器</h1>
@@ -113,20 +132,34 @@
         <div class="semester">
             <h2>📚 上半年成绩</h2>
             <div class="subject-group">
-                <div class="subject"><label>数学 (MT):</label><input type="number" id="math1" value="" min="0" max="100"></div>
-                <div class="subject"><label>地理 (GEO):</label><input type="number" id="geo1" value="" min="0" max="100"></div>
-                <div class="subject"><label>华文 (CH):</label><input type="number" id="ch1" value="" min="0" max="100"></div>
-                <div class="subject"><label>马来文 (BM):</label><input type="number" id="bm1" value="" min="0" max="100"></div>
-                <div class="subject"><label>英文 (ENG):</label><input type="number" id="eng1" value="" min="0" max="100"></div>
-                <div class="subject"><label>历史 (HIS):</label><input type="number" id="his1" value="" min="0" max="100"></div>
-                <div class="subject"><label>美术 (ART):</label><input type="number" id="art1" value="" min="0" max="100"></div>
-                <div class="subject"><label>电脑 (COMPU):</label><input type="number" id="compu1" value="" min="0" max="100"></div>
-                <div class="subject"><label>体育 (PE):</label><input type="number" id="pe1" value="" min="0" max="100"></div>
-                <div class="subject"><label>联课 (CO):</label><input type="number" id="co1" value="" min="0" max="100"></div>
-                <div class="subject"><label>会计学 (AC):</label><input type="number" id="ac1" value="" min="0" max="100"></div>
-                <div class="subject"><label>商业学 (CS):</label><input type="number" id="cs1" value="" min="0" max="100"></div>
-                <div class="subject"><label>历史辅导 (HISm):</label><input type="number" id="hism1" value="" min="0" max="100"></div>
-                <div class="subject"><label>家政 (HOMESC):</label><input type="number" id="homesc1" value="" min="0" max="100"></div>
+                <div class="subject"><label>数学 (MT):</label><input type="number" id="math1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>地理 (GEO):</label><input type="number" id="geo1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>华文 (CH):</label><input type="number" id="ch1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>马来文 (BM):</label><input type="number" id="bm1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>英文 (ENG):</label><input type="number" id="eng1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>历史 (HIS):</label><input type="number" id="his1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>美术 (ART):</label><input type="number" id="art1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>电脑 (COMPU):</label><input type="number" id="compu1" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>体育 (PE):</label><input type="number" id="pe1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>联课 (CO):</label><input type="number" id="co1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>会计学 (AC):</label><input type="number" id="ac1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>商业学 (CS):</label><input type="number" id="cs1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>SEJARAH (HISm):</label><input type="number" id="hism1" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>家政 (HOMESC):</label><input type="number" id="homesc1" value="" min="0"
+                        max="100"></div>
             </div>
             <div class="center">
                 <button id="btn1">计算上半年成绩</button>
@@ -137,20 +170,34 @@
         <div class="semester">
             <h2>📖 下半年成绩</h2>
             <div class="subject-group">
-                <div class="subject"><label>数学 (MT):</label><input type="number" id="math2" value="" min="0" max="100"></div>
-                <div class="subject"><label>地理 (GEO):</label><input type="number" id="geo2" value="" min="0" max="100"></div>
-                <div class="subject"><label>华文 (CH):</label><input type="number" id="ch2" value="" min="0" max="100"></div>
-                <div class="subject"><label>马来文 (BM):</label><input type="number" id="bm2" value="" min="0" max="100"></div>
-                <div class="subject"><label>英文 (ENG):</label><input type="number" id="eng2" value="" min="0" max="100"></div>
-                <div class="subject"><label>历史 (HIS):</label><input type="number" id="his2" value="" min="0" max="100"></div>
-                <div class="subject"><label>美术 (ART):</label><input type="number" id="art2" value="" min="0" max="100"></div>
-                <div class="subject"><label>电脑 (COMPU):</label><input type="number" id="compu2" value="" min="0" max="100"></div>
-                <div class="subject"><label>体育 (PE):</label><input type="number" id="pe2" value="" min="0" max="100"></div>
-                <div class="subject"><label>联课 (CO):</label><input type="number" id="co2" value="" min="0" max="100"></div>
-                <div class="subject"><label>会计学 (AC):</label><input type="number" id="ac2" value="" min="0" max="100"></div>
-                <div class="subject"><label>商业学 (CS):</label><input type="number" id="cs2" value="" min="0" max="100"></div>
-                <div class="subject"><label>历史辅导 (HISm):</label><input type="number" id="hism2" value="" min="0" max="100"></div>
-                <div class="subject"><label>家政 (HOMESC):</label><input type="number" id="homesc2" value="" min="0" max="100"></div>
+                <div class="subject"><label>数学 (MT):</label><input type="number" id="math2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>地理 (GEO):</label><input type="number" id="geo2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>华文 (CH):</label><input type="number" id="ch2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>马来文 (BM):</label><input type="number" id="bm2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>英文 (ENG):</label><input type="number" id="eng2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>历史 (HIS):</label><input type="number" id="his2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>美术 (ART):</label><input type="number" id="art2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>电脑 (COMPU):</label><input type="number" id="compu2" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>体育 (PE):</label><input type="number" id="pe2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>联课 (CO):</label><input type="number" id="co2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>会计学 (AC):</label><input type="number" id="ac2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>商业学 (CS):</label><input type="number" id="cs2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>SEJARAH (HISm):</label><input type="number" id="hism2" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>家政 (HOMESC):</label><input type="number" id="homesc2" value="" min="0"
+                        max="100"></div>
             </div>
             <div class="center">
                 <button id="btn2" class="second">计算下半年成绩</button>
@@ -167,11 +214,11 @@
 
     <script>
         // 使用事件监听器确保按钮工作
-        document.getElementById('btn1').addEventListener('click', function() {
+        document.getElementById('btn1').addEventListener('click', function () {
             calculateSemester(1);
         });
 
-        document.getElementById('btn2').addEventListener('click', function() {
+        document.getElementById('btn2').addEventListener('click', function () {
             calculateSemester(2);
         });
 
@@ -200,9 +247,9 @@
             const homesc = parseFloat(document.getElementById('homesc' + semester).value) || 0;
 
             // 计算公式
-            const total = (ch * 7 + bm * 6 + eng * 7 + math * 7 + his * 3 + geo * 3 +
-                          art * 1 + compu * 2 + pe * 2 + co * 2 + ac * 4 + homesc * 1 +
-                          cs * 2 + hism * 1) / 48;
+            const total = (ch * 6 + bm * 6 + eng * 6 + math * 6 + his * 3 + geo * 3 +
+                art * 1 + compu * 2 + pe * 1 + co * 3 + ac * 4 + homesc * 1 +
+                cs * 2 + hism * 1) / 45;
 
             if (semester === 1) {
                 sem1Result = total;
@@ -230,5 +277,7 @@
         }
     </script>
 </body>
+
 </html>
 
+<!-- made by Sky Guay Hong Wei-->
