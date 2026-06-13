@@ -1,0 +1,303 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Orbitron', sans-serif;
+    min-height:100vh;
+    padding:40px 20px;
+
+    background:
+        radial-gradient(circle at top left,#00f7ff33,transparent 35%),
+        radial-gradient(circle at bottom right,#ff00ff22,transparent 35%),
+        linear-gradient(135deg,#050816,#0b1120,#111827);
+
+    color:white;
+}
+
+/* Main Container */
+.container{
+    max-width:1000px;
+    margin:auto;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:
+        0 0 25px rgba(0,255,255,0.15),
+        0 0 80px rgba(0,255,255,0.08);
+}
+
+/* Title */
+h1{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        90deg,
+        #00f5ff,
+        #4dffb8,
+        #ff4dff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 15px rgba(0,255,255,0.6);
+}
+
+p{
+    text-align:center;
+    color:#94a3b8;
+}
+
+/* Semester Cards */
+.semester{
+    margin-top:30px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:0.4s;
+}
+
+.semester:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 30px rgba(0,255,255,0.18);
+}
+
+.semester h2{
+    margin-bottom:20px;
+
+    color:#00f5ff;
+
+    border-bottom:1px solid rgba(0,245,255,.4);
+
+    padding-bottom:10px;
+}
+
+/* Subjects Grid */
+.subject-group{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+/* Subject Card */
+.subject{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:14px;
+
+    padding:12px;
+
+    transition:.3s;
+}
+
+.subject:hover{
+    border-color:#00f5ff;
+
+    box-shadow:
+        0 0 15px rgba(0,245,255,.25);
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+
+    font-size:13px;
+
+    color:#cbd5e1;
+}
+
+/* Futuristic Inputs */
+input{
+    width:100%;
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:rgba(0,0,0,.35);
+
+    color:white;
+
+    font-size:15px;
+    text-align:center;
+
+    transition:.3s;
+}
+
+input:focus{
+    outline:none;
+
+    border-color:#00f5ff;
+
+    box-shadow:
+        0 0 15px rgba(0,245,255,.4);
+
+    background:rgba(0,0,0,.55);
+}
+
+/* Buttons */
+button{
+    border:none;
+
+    border-radius:15px;
+
+    padding:14px 28px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.35s;
+}
+
+/* Cyan Button */
+button{
+    background:linear-gradient(
+        135deg,
+        #00e5ff,
+        #00bcd4
+    );
+
+    box-shadow:
+        0 0 20px rgba(0,229,255,.35);
+}
+
+button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 30px rgba(0,229,255,.6);
+}
+
+/* Blue Button */
+button.second{
+    background:linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+
+    box-shadow:
+        0 0 20px rgba(59,130,246,.35);
+}
+
+/* Final Button */
+button.final{
+    background:linear-gradient(
+        135deg,
+        #ff00cc,
+        #7c3aed
+    );
+
+    font-size:18px;
+
+    box-shadow:
+        0 0 30px rgba(255,0,204,.45);
+}
+
+button.final:hover{
+    box-shadow:
+        0 0 40px rgba(255,0,204,.75);
+}
+
+.center{
+    text-align:center;
+    margin-top:20px;
+}
+
+/* Result Panel */
+#result{
+    margin-top:30px;
+
+    background:rgba(0,255,170,.08);
+
+    border:1px solid rgba(0,255,170,.2);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    color:#00ffcc;
+
+    font-size:20px;
+    font-weight:700;
+
+    white-space:pre-line;
+
+    box-shadow:
+        0 0 25px rgba(0,255,170,.15);
+}
+
+.final-result{
+    background:rgba(255,0,204,.08);
+
+    border-color:rgba(255,0,204,.25);
+
+    color:#ff66d9;
+
+    box-shadow:
+        0 0 35px rgba(255,0,204,.2);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(
+        #00f5ff,
+        #ff00cc
+    );
+    border-radius:10px;
+}
+.bg-grid{
+    position:fixed;
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(0,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,.05) 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    pointer-events:none;
+
+    z-index:-1;
+}

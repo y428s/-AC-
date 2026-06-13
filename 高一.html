@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>高一文商总平均计算器</title>
+    <link rel="stylesheet" href="高一.css">
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <div class="container">
+        <h1>🏫 高一文商总平均计算器</h1>
+        <p style="text-align: center; color: #666;">根据宽柔中学计算方法</p>
+
+        <!-- 上半年成绩 -->
+        <div class="semester">
+            <h2>📚 上半年成绩</h2>
+            <div class="subject-group">
+                <div class="subject"><label>数学 (MT):</label><input type="number" id="math1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>地理 (GEO):</label><input type="number" id="geo1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>华文 (CH):</label><input type="number" id="ch1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>马来文 (BM):</label><input type="number" id="bm1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>英文 (ENG):</label><input type="number" id="eng1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>历史 (HIS):</label><input type="number" id="his1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>美术 (ART):</label><input type="number" id="art1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>电脑 (COMPU):</label><input type="number" id="compu1" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>体育 (PE):</label><input type="number" id="pe1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>联课 (CO):</label><input type="number" id="co1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>会计学 (AC):</label><input type="number" id="ac1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>商业学 (CS):</label><input type="number" id="cs1" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>SEJARAH (HISm):</label><input type="number" id="hism1" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>家政 (HOMESC):</label><input type="number" id="homesc1" value="" min="0"
+                        max="100"></div>
+            </div>
+            <div class="center">
+                <button id="btn1">计算上半年成绩</button>
+            </div>
+        </div>
+
+        <!-- 下半年成绩 -->
+        <div class="semester">
+            <h2>📖 下半年成绩</h2>
+            <div class="subject-group">
+                <div class="subject"><label>数学 (MT):</label><input type="number" id="math2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>地理 (GEO):</label><input type="number" id="geo2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>华文 (CH):</label><input type="number" id="ch2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>马来文 (BM):</label><input type="number" id="bm2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>英文 (ENG):</label><input type="number" id="eng2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>历史 (HIS):</label><input type="number" id="his2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>美术 (ART):</label><input type="number" id="art2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>电脑 (COMPU):</label><input type="number" id="compu2" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>体育 (PE):</label><input type="number" id="pe2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>联课 (CO):</label><input type="number" id="co2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>会计学 (AC):</label><input type="number" id="ac2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>商业学 (CS):</label><input type="number" id="cs2" value="" min="0" max="100">
+                </div>
+                <div class="subject"><label>SEJARAH (HISm):</label><input type="number" id="hism2" value="" min="0"
+                        max="100"></div>
+                <div class="subject"><label>家政 (HOMESC):</label><input type="number" id="homesc2" value="" min="0"
+                        max="100"></div>
+            </div>
+            <div class="center">
+                <button id="btn2" class="second">计算下半年成绩</button>
+            </div>
+        </div>
+
+        <!-- 最终计算 -->
+        <div class="center">
+            <button id="btnFinal" class="final">计算最终总平均</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // 使用事件监听器确保按钮工作
+        document.getElementById('btn1').addEventListener('click', function () {
+            calculateSemester(1);
+        });
+
+        document.getElementById('btn2').addEventListener('click', function () {
+            calculateSemester(2);
+        });
+
+        document.getElementById('btnFinal').addEventListener('click', calculateFinal);
+
+        let sem1Result = 0;
+        let sem2Result = 0;
+
+        function calculateSemester(semester) {
+            alert("正在计算第" + semester + "学期成绩...");
+
+            // 获取所有科目分数
+            const math = parseFloat(document.getElementById('math' + semester).value) || 0;
+            const geo = parseFloat(document.getElementById('geo' + semester).value) || 0;
+            const ch = parseFloat(document.getElementById('ch' + semester).value) || 0;
+            const bm = parseFloat(document.getElementById('bm' + semester).value) || 0;
+            const eng = parseFloat(document.getElementById('eng' + semester).value) || 0;
+            const his = parseFloat(document.getElementById('his' + semester).value) || 0;
+            const art = parseFloat(document.getElementById('art' + semester).value) || 0;
+            const compu = parseFloat(document.getElementById('compu' + semester).value) || 0;
+            const pe = parseFloat(document.getElementById('pe' + semester).value) || 0;
+            const co = parseFloat(document.getElementById('co' + semester).value) || 0;
+            const ac = parseFloat(document.getElementById('ac' + semester).value) || 0;
+            const cs = parseFloat(document.getElementById('cs' + semester).value) || 0;
+            const hism = parseFloat(document.getElementById('hism' + semester).value) || 0;
+            const homesc = parseFloat(document.getElementById('homesc' + semester).value) || 0;
+
+            // 计算公式
+            const total = (ch * 6 + bm * 6 + eng * 6 + math * 6 + his * 3 + geo * 3 +
+                art * 1 + compu * 2 + pe * 1 + co * 3 + ac * 4 + homesc * 1 +
+                cs * 2 + hism * 1) / 45;
+
+            if (semester === 1) {
+                sem1Result = total;
+            } else {
+                sem2Result = total;
+            }
+
+            document.getElementById('result').innerHTML = "第" + semester + "学期成绩: " + total.toFixed(2);
+            alert("第" + semester + "学期成绩: " + total.toFixed(2));
+        }
+
+        function calculateFinal() {
+            if (sem1Result === 0 || sem2Result === 0) {
+                alert("请先计算两个学期的成绩！");
+                return;
+            }
+
+            const final = (sem1Result + sem2Result) / 2;
+            document.getElementById('result').innerHTML =
+                "上半年成绩: " + sem1Result.toFixed(2) + "\n" +
+                "下半年成绩: " + sem2Result.toFixed(2) + "\n" +
+                "最终总平均: " + final.toFixed(2);
+
+            document.getElementById('result').classList.add('final-result');
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- made by Sky Guay Hong Wei-->
